@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "./components/NavBar";
 
 export const metadata: Metadata = {
   title: "JADE",
@@ -14,9 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
-      >
-        {children}
+        className={`antialiased`}>
+          <NavBar/>
+          <main className="bg-slate-700 h-screen p-16">
+            {children}
+          </main>
       </body>
     </html>
   );
