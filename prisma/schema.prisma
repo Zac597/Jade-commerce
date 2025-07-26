@@ -17,7 +17,8 @@ datasource db {
 // Example data model
 model User {
   id        Int      @id @default(autoincrement())
+  externalId String @unique
+  attributes Json
   createdAt DateTime @default(now())
-  email     String   @unique
-  name      String?
+  updateAt DateTime @updatedAt
 }
