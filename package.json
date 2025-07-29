@@ -2,12 +2,13 @@
   "name": "jade-commerce",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "prisma generate && prisma migrate deploy && next dev",
-    "build": "prisma generate && prisma db push && next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+"scripts": {
+  "dev": "prisma generate && prisma migrate deploy && next dev",
+  "build": "next build",
+  "postinstall": "prisma generate && prisma db push",
+  "start": "next start",
+  "lint": "next lint"
+},
   "dependencies": {
     "@clerk/localizations": "^3.20.3",
     "@clerk/nextjs": "^6.26.0",

@@ -4,7 +4,7 @@
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
-import {
+const {
   PrismaClientKnownRequestError,
   PrismaClientUnknownRequestError,
   PrismaClientRustPanicError,
@@ -26,7 +26,7 @@ import {
   Public,
   getRuntime,
   createParam,
-} from './runtime/library.js'
+} = require('./runtime/library.js')
 
 
 const Prisma = {}
@@ -81,7 +81,7 @@ Prisma.NullTypes = {
 
 
 
-  import path from 'path'
+  const path = require('path')
 
 /**
  * Enums
@@ -177,7 +177,7 @@ const config = {
   "copyEngine": true
 }
 
-import fs from 'fs'
+const fs = require('fs')
 
 config.dirname = __dirname
 if (!fs.existsSync(path.join(__dirname, 'schema.prisma'))) {
@@ -200,7 +200,7 @@ config.engineWasm = undefined
 config.compilerWasm = undefined
 
 
-import { warnEnvConflicts } from './runtime/library.js'
+const { warnEnvConflicts } = require('./runtime/library.js')
 
 warnEnvConflicts({
     rootEnvPath: config.relativeEnvPaths.rootEnvPath && path.resolve(config.dirname, config.relativeEnvPaths.rootEnvPath),

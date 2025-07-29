@@ -4,7 +4,7 @@
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
-import {
+const {
   PrismaClientKnownRequestError,
   PrismaClientUnknownRequestError,
   PrismaClientRustPanicError,
@@ -26,7 +26,7 @@ import {
   Public,
   getRuntime,
   createParam,
-} from './runtime/edge.js'
+} = require('./runtime/edge.js')
 
 
 const Prisma = {}
