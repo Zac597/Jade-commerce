@@ -4,7 +4,7 @@
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
-const {
+import {
   PrismaClientKnownRequestError,
   PrismaClientUnknownRequestError,
   PrismaClientRustPanicError,
@@ -26,8 +26,7 @@ const {
   Public,
   getRuntime,
   createParam,
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-} = require('./runtime/edge.js')
+} from './runtime/edge.js'
 
 
 const Prisma = {}
