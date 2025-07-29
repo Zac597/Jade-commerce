@@ -172,8 +172,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma-client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\n// Example data model\nmodel User {\n  id         Int      @id @default(autoincrement())\n  externalId String   @unique\n  attributes Json\n  createdAt  DateTime @default(now())\n  updateAt   DateTime @updatedAt\n}\n",
-  "inlineSchemaHash": "c87b667dd7d4141727b0beab766a5c409c9d942a37d29349ec6a9d9b1cdc94bf",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma-client\"\n}\n\n// Example data model\nmodel User {\n  id         Int      @id @default(autoincrement())\n  externalId String   @unique\n  attributes Json\n  createdAt  DateTime @default(now())\n  updateAt   DateTime @updatedAt\n}\n",
+  "inlineSchemaHash": "cd749210bd3e752b1d07bbf0567f037ad97d38c73d3f2a3425b44d88df79c850",
   "copyEngine": true
 }
 
